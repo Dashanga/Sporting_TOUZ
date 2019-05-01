@@ -1,6 +1,6 @@
 ﻿namespace Sporting
 {
-    partial class Welcome
+    partial class FormWelcome
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWelcome));
             this.labelWelcome = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             this.buttonStart.Text = "Начать";
             this.buttonStart.UseVisualStyleBackColor = true;
             // 
-            // Welcome
+            // FormWelcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -66,9 +66,8 @@
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.labelWelcome);
             this.ForeColor = System.Drawing.Color.Red;
-            this.Name = "Welcome";
-            this.Text = "Добро пожаловать!";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "FormWelcome";
+            this.Load += new System.EventHandler(this.FormWelcome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

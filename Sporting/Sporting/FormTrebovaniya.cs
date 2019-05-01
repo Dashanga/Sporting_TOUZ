@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sporting
 {
-    public partial class View : Form
+    public partial class FormTrebovaniya : Form
     {
-        public View()
+        public FormTrebovaniya()
         {
             InitializeComponent();
         }
