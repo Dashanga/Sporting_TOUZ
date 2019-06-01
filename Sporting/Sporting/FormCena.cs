@@ -19,7 +19,16 @@ namespace Sporting
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
+            var form = new FormEkipirovka();
+            form.Show();
+            this.Hide();
+        }
 
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            var form = new FormArea();
+            form.Show();
+            this.Hide();
         }
     }
 }

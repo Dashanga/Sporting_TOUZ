@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArea.Designer.cs">
+      <DependentUpon>FormArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCena.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,23 +64,29 @@
     <Compile Include="FormChastota.Designer.cs">
       <DependentUpon>FormChastota.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormComand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormComand.Designer.cs">
+      <DependentUpon>FormComand.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEkipirovka.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEkipirovka.Designer.cs">
       <DependentUpon>FormEkipirovka.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPlace.cs">
+    <Compile Include="FormResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPlace.Designer.cs">
-      <DependentUpon>FormPlace.cs</DependentUpon>
+    <Compile Include="FormResult.Designer.cs">
+      <DependentUpon>FormResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTipe.cs">
+    <Compile Include="FormTravm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTipe.Designer.cs">
-      <DependentUpon>FormTipe.cs</DependentUpon>
+    <Compile Include="FormTravm.Designer.cs">
+      <DependentUpon>FormTravm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTrebovaniya.cs">
       <SubType>Form</SubType>
@@ -82,11 +94,11 @@
     <Compile Include="FormTrebovaniya.Designer.cs">
       <DependentUpon>FormTrebovaniya.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormView.cs">
+    <Compile Include="FormVidSporta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormView.Designer.cs">
-      <DependentUpon>FormView.cs</DependentUpon>
+    <Compile Include="FormVidSporta.Designer.cs">
+      <DependentUpon>FormVidSporta.cs</DependentUpon>
     </Compile>
     <Compile Include="FormVozrast.cs">
       <SubType>Form</SubType>
@@ -102,26 +114,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormArea.resx">
+      <DependentUpon>FormArea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCena.resx">
       <DependentUpon>FormCena.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChastota.resx">
       <DependentUpon>FormChastota.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormComand.resx">
+      <DependentUpon>FormComand.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEkipirovka.resx">
       <DependentUpon>FormEkipirovka.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPlace.resx">
-      <DependentUpon>FormPlace.cs</DependentUpon>
+    <EmbeddedResource Include="FormResult.resx">
+      <DependentUpon>FormResult.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTipe.resx">
-      <DependentUpon>FormTipe.cs</DependentUpon>
+    <EmbeddedResource Include="FormTravm.resx">
+      <DependentUpon>FormTravm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTrebovaniya.resx">
       <DependentUpon>FormTrebovaniya.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormView.resx">
-      <DependentUpon>FormView.cs</DependentUpon>
+    <EmbeddedResource Include="FormVidSporta.resx">
+      <DependentUpon>FormVidSporta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVozrast.resx">
       <DependentUpon>FormVozrast.cs</DependentUpon>

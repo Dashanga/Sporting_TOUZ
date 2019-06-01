@@ -21,5 +21,12 @@ namespace Sporting
         {
 
         }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            var form = new FormVidSporta();
+            form.Show(); // отображаем Form2
+            this.Hide();
+        }
     }
 }

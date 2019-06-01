@@ -57,6 +57,7 @@
             this.buttonBack.TabIndex = 3;
             this.buttonBack.Text = "Назад";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // buttonNext
             // 

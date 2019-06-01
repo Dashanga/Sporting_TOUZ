@@ -85,6 +85,7 @@
             this.buttonBack.TabIndex = 7;
             this.buttonBack.Text = "Назад";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // buttonNext
             // 
@@ -94,6 +95,7 @@
             this.buttonNext.TabIndex = 8;
             this.buttonNext.Text = "Закончить";
             this.buttonNext.UseVisualStyleBackColor = true;
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
             // FormChastota
             // 
