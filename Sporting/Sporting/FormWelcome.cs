@@ -19,7 +19,11 @@ namespace Sporting
 
         private void FormWelcome_Load(object sender, EventArgs e)
         {
-
+            using (var context = new SportSectionsEntities())
+            {
+                var tableObj = context.Table.FirstOrDefault();
+                labelWelcome.Text = tableObj.NameOfSection;
+            }
         }
     }
 }

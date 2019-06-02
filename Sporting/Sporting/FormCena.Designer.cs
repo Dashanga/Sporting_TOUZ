@@ -131,6 +131,7 @@
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.labelChoose);
             this.Name = "FormCena";
+            this.Load += new System.EventHandler(this.FormCena_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,5 +16,10 @@ namespace Sporting
         {
             InitializeComponent();
         }
+
+        private void FormCena_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
