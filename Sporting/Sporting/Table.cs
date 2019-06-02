@@ -20,11 +20,15 @@ namespace Sporting
         public string NameOfSection { get; set; }
         public string Place { get; set; }
         public string Contact { get; set; }
-        public string Age { get; set; }
-        public string Podgotovka { get; set; }
-        public string Travmoopasnost { get; set; }
-        public string Cena { get; set; }
-        public string CenaEkip { get; set; }
-        public string Chastota { get; set; }
+        public Nullable<int> Podgotovka { get; set; }
+        public Nullable<int> Travmoopasnost { get; set; }
+        public Nullable<int> Chastota { get; set; }
+        public Nullable<int> AgeMin { get; set; }
+        public Nullable<int> CenaMin { get; set; }
+        public Nullable<int> CenaEkipMin { get; set; }
+        public string Rayon { get; set; }
+        public Nullable<int> AgeMax { get; set; }
+        public Nullable<int> CenaMax { get; set; }
+        public Nullable<int> CenaEkipMax { get; set; }
     }
 }

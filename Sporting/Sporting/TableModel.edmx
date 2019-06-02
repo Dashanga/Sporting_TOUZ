@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище SportSectionsModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище SportSectionsModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Table">
           <Key>
             <PropertyRef Name="Id" />
@@ -15,18 +15,21 @@
           <Property Name="NameOfSection" Type="nvarchar" MaxLength="250" />
           <Property Name="Place" Type="nvarchar" MaxLength="250" />
           <Property Name="Contact" Type="nvarchar" MaxLength="250" />
-          <Property Name="Age" Type="nvarchar" MaxLength="250" />
-          <Property Name="Podgotovka" Type="nvarchar" MaxLength="250" />
-          <Property Name="Travmoopasnost" Type="nvarchar" MaxLength="250" />
-          <Property Name="Cena" Type="nvarchar" MaxLength="250" />
-          <Property Name="CenaEkip" Type="nvarchar" MaxLength="250" />
-          <Property Name="Chastota" Type="nvarchar" MaxLength="250" />
+          <Property Name="AgeMin" Type="int" />
+          <Property Name="Podgotovka" Type="int" />
+          <Property Name="Travmoopasnost" Type="int" />
+          <Property Name="CenaMin" Type="int" />
+          <Property Name="CenaEkipMin" Type="int" />
+          <Property Name="Chastota" Type="int" />
+          <Property Name="Rayon" Type="nvarchar" MaxLength="50" />
+          <Property Name="AgeMax" Type="int" />
+          <Property Name="CenaMax" Type="int" />
+          <Property Name="CenaEkipMax" Type="int" />
         </EntityType>
         <EntityContainer Name="Хранилище SportSectionsModelContainer">
           <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SportSectionsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -40,12 +43,16 @@
           <Property Name="NameOfSection" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Place" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Contact" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Age" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Podgotovka" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Travmoopasnost" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Cena" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="CenaEkip" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Chastota" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Podgotovka" Type="Int32" />
+          <Property Name="Travmoopasnost" Type="Int32" />
+          <Property Name="Chastota" Type="Int32" />
+          <Property Name="AgeMin" Type="Int32" />
+          <Property Name="CenaMin" Type="Int32" />
+          <Property Name="CenaEkipMin" Type="Int32" />
+          <Property Name="Rayon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AgeMax" Type="Int32" />
+          <Property Name="CenaMax" Type="Int32" />
+          <Property Name="CenaEkipMax" Type="Int32" />
         </EntityType>
         <EntityContainer Name="SportSectionsEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Table" EntityType="Self.Table" />
@@ -59,17 +66,21 @@
           <EntitySetMapping Name="Table">
             <EntityTypeMapping TypeName="SportSectionsModel.Table">
               <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="CenaEkipMax" ColumnName="CenaEkipMax" />
+                <ScalarProperty Name="CenaMax" ColumnName="CenaMax" />
+                <ScalarProperty Name="AgeMax" ColumnName="AgeMax" />
+                <ScalarProperty Name="Rayon" ColumnName="Rayon" />
+                <ScalarProperty Name="CenaEkipMin" ColumnName="CenaEkipMin" />
+                <ScalarProperty Name="CenaMin" ColumnName="CenaMin" />
+                <ScalarProperty Name="AgeMin" ColumnName="AgeMin" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="VidSporta" ColumnName="VidSporta" />
                 <ScalarProperty Name="Komand" ColumnName="Komand" />
                 <ScalarProperty Name="NameOfSection" ColumnName="NameOfSection" />
                 <ScalarProperty Name="Place" ColumnName="Place" />
                 <ScalarProperty Name="Contact" ColumnName="Contact" />
-                <ScalarProperty Name="Age" ColumnName="Age" />
                 <ScalarProperty Name="Podgotovka" ColumnName="Podgotovka" />
                 <ScalarProperty Name="Travmoopasnost" ColumnName="Travmoopasnost" />
-                <ScalarProperty Name="Cena" ColumnName="Cena" />
-                <ScalarProperty Name="CenaEkip" ColumnName="CenaEkip" />
                 <ScalarProperty Name="Chastota" ColumnName="Chastota" />
               </MappingFragment>
             </EntityTypeMapping>
