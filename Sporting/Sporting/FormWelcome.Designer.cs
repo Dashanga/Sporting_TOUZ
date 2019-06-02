@@ -68,7 +68,6 @@
             this.Controls.Add(this.labelWelcome);
             this.ForeColor = System.Drawing.Color.Red;
             this.Name = "FormWelcome";
-            this.Load += new System.EventHandler(this.FormWelcome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
