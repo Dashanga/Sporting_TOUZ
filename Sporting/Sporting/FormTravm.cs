@@ -10,23 +10,23 @@ using System.Windows.Forms;
 
 namespace Sporting
 {
-    public partial class FormEkipirovka : Form
+    public partial class FormTravm : Form
     {
-        public FormEkipirovka()
+        public FormTravm()
         {
             InitializeComponent();
         }
 
-        private void buttonNext_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
-            var form = new FormVozrast();
+            var form = new FormComand();
             form.Show();
             this.Hide();
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void buttonNext_Click(object sender, EventArgs e)
         {
-            var form = new FormCena();
+            var form = new FormResult();
             form.Show();
             this.Hide();
         }

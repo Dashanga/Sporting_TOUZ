@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SportModels
+namespace SportServiceDAL.ViewModel
 {
-    public class ViewOfSport
+    public class ViewOfSportViewModel
     {
         public int Id { get; set; }
         public string ViewName { get; set; }

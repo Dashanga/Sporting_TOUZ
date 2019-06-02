@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace Sporting
 {
-    public partial class FormChastota : Form
+    public partial class FormResult : Form
     {
-        public FormChastota()
+        public FormResult()
         {
             InitializeComponent();
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void buttonEnd_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void buttonNext_Click(object sender, EventArgs e)
-        {
-
+            Close();
         }
     }
 }
