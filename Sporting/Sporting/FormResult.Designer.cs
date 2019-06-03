@@ -30,6 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonEnd = new System.Windows.Forms.Button();
+            this.buttonGetData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,11 +52,22 @@
             this.buttonEnd.UseVisualStyleBackColor = true;
             this.buttonEnd.Click += new System.EventHandler(this.buttonEnd_Click);
             // 
+            // buttonGetData
+            // 
+            this.buttonGetData.Location = new System.Drawing.Point(13, 400);
+            this.buttonGetData.Name = "buttonGetData";
+            this.buttonGetData.Size = new System.Drawing.Size(118, 26);
+            this.buttonGetData.TabIndex = 2;
+            this.buttonGetData.Text = "Отобразить";
+            this.buttonGetData.UseVisualStyleBackColor = true;
+            this.buttonGetData.Click += new System.EventHandler(this.buttonGetData_Click);
+            // 
             // FormResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 427);
+            this.Controls.Add(this.buttonGetData);
             this.Controls.Add(this.buttonEnd);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormResult";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonEnd;
+        private System.Windows.Forms.Button buttonGetData;
     }
 }
