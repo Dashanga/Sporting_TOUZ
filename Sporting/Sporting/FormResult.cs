@@ -29,16 +29,13 @@ namespace Sporting
 
         private void buttonGetData_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=HOME-PC;Initial Catalog=SportSections;Integrated Security=True");
-            con.Open();
+            
 
-            SqlDataAdapter da = new SqlDataAdapter(Createzapros(), con);
-            SqlCommandBuilder cb = new SqlCommandBuilder(da);
-
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-
-            dataGridView1.DataSource = ds.Tables[0];
+            using (var context = new SportSectionsEntities())
+            {
+                var tableObj = context.Table.SqlQuery(Createzapros()).ToList();
+                dataGridView1.DataSource = tableObj; 
+            }
         }
 
         private String Createzapros()
