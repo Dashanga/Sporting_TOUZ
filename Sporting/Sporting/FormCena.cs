@@ -12,21 +12,23 @@ namespace Sporting
 {
     public partial class FormCena : Form
     {
-        public FormCena()
+        String z;
+        public FormCena(String zapros)
         {
             InitializeComponent();
+            z = zapros;
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            var form = new FormEkipirovka();
+            var form = new FormEkipirovka(z);
             form.Show();
             this.Hide();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            var form = new FormArea();
+            var form = new FormArea(z);
             form.Show();
             this.Hide();
         }

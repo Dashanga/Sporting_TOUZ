@@ -37,7 +37,7 @@ namespace Sporting
                 serv.Add("Basketball", zapros);
             }
 
-            var form = new FormArea();
+            var form = new FormArea(zapros);
             form.Show();
             this.Hide();
         }

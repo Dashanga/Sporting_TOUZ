@@ -12,21 +12,24 @@ namespace Sporting
 {
     public partial class FormVozrast : Form
     {
-        public FormVozrast()
+
+        String z;
+        public FormVozrast(String zapros)
         {
             InitializeComponent();
+            z = zapros;
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            var form = new FormTrebovaniya();
+            var form = new FormTrebovaniya(z);
             form.Show();
             this.Hide();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            var form = new FormEkipirovka();
+            var form = new FormEkipirovka(z);
             form.Show();
             this.Hide();
         }
