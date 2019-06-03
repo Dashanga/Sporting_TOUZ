@@ -9,17 +9,10 @@ namespace SportingService
 {
     public class VidSportaService
     {
-        public Section Basketball()
+        public String Add (String vid, string sql)
         {
-            using (Section context = new SportSectionsEntities())
-            {
-                
-                Section sec = context.Sections
-                                .Where(b => b.VidSporta == "Баскетбол")
-                                .FirstOrDefault();
-                return sec;
-            }
-            
+            string zapros = sql + "'" + vid + "'";
+            return zapros;
         }
     }
 }

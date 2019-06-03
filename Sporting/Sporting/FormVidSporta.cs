@@ -14,6 +14,7 @@ namespace Sporting
     public partial class FormVidSporta : Form
     {
         VidSportaService serv = new VidSportaService();
+        String zapros = "SELECT * FROM Section WHERE Vidsporta = ";
         public FormVidSporta()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace Sporting
             if (checkBoxBasketball.Checked)
             {
                 check = true;
-                serv.Basketball
+                serv.Add("Basketball", zapros);
             }
 
             var form = new FormArea();
