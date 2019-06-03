@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SportingService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Sporting
 {
     public partial class FormVidSporta : Form
     {
+        VidSportaService serv = new VidSportaService();
         public FormVidSporta()
         {
             InitializeComponent();
@@ -27,6 +29,13 @@ namespace Sporting
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
+            Boolean check = false;
+            if (checkBoxBasketball.Checked)
+            {
+                check = true;
+                serv.Basketball
+            }
+
             var form = new FormArea();
             form.Show();
             this.Hide();

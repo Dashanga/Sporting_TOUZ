@@ -82,7 +82,7 @@
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(134, 25);
             this.buttonOk.TabIndex = 2;
-            this.buttonOk.Text = "Продолжить";
+            this.buttonOk.Text = "Далее";
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
@@ -92,7 +92,7 @@
             this.buttonNazad.Name = "buttonNazad";
             this.buttonNazad.Size = new System.Drawing.Size(118, 22);
             this.buttonNazad.TabIndex = 3;
-            this.buttonNazad.Text = "Вернуться";
+            this.buttonNazad.Text = "Назад";
             this.buttonNazad.UseVisualStyleBackColor = true;
             this.buttonNazad.Click += new System.EventHandler(this.buttonNazad_Click);
             // 

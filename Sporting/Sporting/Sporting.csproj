@@ -152,6 +152,7 @@
     <EmbeddedResource Include="FormArea.resx">
       <DependentUpon>FormArea.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="Sect.cs" />
     <Compile Include="Table.cs">
       <DependentUpon>TableModel.tt</DependentUpon>
     </Compile>
@@ -244,6 +245,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SportingService\SportingService.csproj">
+      <Project>{863fe950-0d65-492d-b5a3-e57089917cdc}</Project>
+      <Name>SportingService</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
