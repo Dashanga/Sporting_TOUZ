@@ -45,10 +45,6 @@
     <Compile Include="SectionImplement.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sporting\Sporting.csproj">
-      <Project>{76acd8a3-100c-445b-917f-0dddfb9ec989}</Project>
-      <Name>Sporting</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SportModels\SportModels.csproj">
       <Project>{c76b033a-1208-49df-b3e8-2ed8912810fe}</Project>
       <Name>SportModels</Name>

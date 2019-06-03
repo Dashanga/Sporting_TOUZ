@@ -1,8 +1,12 @@
-﻿using System;
+﻿using SportingImplement;
+using SportServiceDAL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unity;
+using Unity.Lifetime;
 
 namespace Sporting
 {
@@ -14,9 +18,17 @@ namespace Sporting
         [STAThread]
         static void Main()
         {
+            var container = BuildUnityContainer();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormWelcome());
+            Application.Run(container.Resolve<FormWelcome>());
+        }
+        public static IUnityContainer BuildUnityContainer()
+        {
+            var currentContainer = new UnityContainer();
+            currentContainer.RegisterType<ISectionService, SectionImplement>(new
+           HierarchicalLifetimeManager());
+            return currentContainer;
         }
     }
 }
