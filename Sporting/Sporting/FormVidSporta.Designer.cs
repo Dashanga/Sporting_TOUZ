@@ -34,7 +34,6 @@
             this.checkBoxBasketball = new System.Windows.Forms.CheckBox();
             this.checkBoxBoxing = new System.Windows.Forms.CheckBox();
             this.checkBoxTaekwondo = new System.Windows.Forms.CheckBox();
-            this.checkBoxSamba = new System.Windows.Forms.CheckBox();
             this.checkBoxFencing = new System.Windows.Forms.CheckBox();
             this.checkBoxJuiJutsu = new System.Windows.Forms.CheckBox();
             this.checkBoxRockClimbing = new System.Windows.Forms.CheckBox();
@@ -62,7 +61,6 @@
             this.checkBoxSwimming = new System.Windows.Forms.CheckBox();
             this.checkBoxCycling = new System.Windows.Forms.CheckBox();
             this.checkBoxBiathlon = new System.Windows.Forms.CheckBox();
-            this.checkBoxSkiing = new System.Windows.Forms.CheckBox();
             this.checkBoxArchery = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
@@ -78,7 +76,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(183, 461);
+            this.buttonOk.Location = new System.Drawing.Point(183, 424);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(134, 25);
             this.buttonOk.TabIndex = 2;
@@ -88,7 +86,7 @@
             // 
             // buttonNazad
             // 
-            this.buttonNazad.Location = new System.Drawing.Point(11, 461);
+            this.buttonNazad.Location = new System.Drawing.Point(8, 424);
             this.buttonNazad.Name = "buttonNazad";
             this.buttonNazad.Size = new System.Drawing.Size(118, 22);
             this.buttonNazad.TabIndex = 3;
@@ -125,16 +123,6 @@
             this.checkBoxTaekwondo.TabIndex = 6;
             this.checkBoxTaekwondo.Text = "Тхэквандо";
             this.checkBoxTaekwondo.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSamba
-            // 
-            this.checkBoxSamba.AutoSize = true;
-            this.checkBoxSamba.Location = new System.Drawing.Point(8, 110);
-            this.checkBoxSamba.Name = "checkBoxSamba";
-            this.checkBoxSamba.Size = new System.Drawing.Size(59, 17);
-            this.checkBoxSamba.TabIndex = 7;
-            this.checkBoxSamba.Text = "Самба";
-            this.checkBoxSamba.UseVisualStyleBackColor = true;
             // 
             // checkBoxFencing
             // 
@@ -281,9 +269,9 @@
             this.checkBoxRhytmGymn.AutoSize = true;
             this.checkBoxRhytmGymn.Location = new System.Drawing.Point(183, 179);
             this.checkBoxRhytmGymn.Name = "checkBoxRhytmGymn";
-            this.checkBoxRhytmGymn.Size = new System.Drawing.Size(110, 17);
+            this.checkBoxRhytmGymn.Size = new System.Drawing.Size(174, 17);
             this.checkBoxRhytmGymn.TabIndex = 22;
-            this.checkBoxRhytmGymn.Text = "Худ. гимнастика";
+            this.checkBoxRhytmGymn.Text = "Художественная гимнастика";
             this.checkBoxRhytmGymn.UseVisualStyleBackColor = true;
             // 
             // checkBoxTennis
@@ -406,20 +394,10 @@
             this.checkBoxBiathlon.Text = "Биатлон";
             this.checkBoxBiathlon.UseVisualStyleBackColor = true;
             // 
-            // checkBoxSkiing
-            // 
-            this.checkBoxSkiing.AutoSize = true;
-            this.checkBoxSkiing.Location = new System.Drawing.Point(183, 386);
-            this.checkBoxSkiing.Name = "checkBoxSkiing";
-            this.checkBoxSkiing.Size = new System.Drawing.Size(102, 17);
-            this.checkBoxSkiing.TabIndex = 35;
-            this.checkBoxSkiing.Text = "Лыжный спорт";
-            this.checkBoxSkiing.UseVisualStyleBackColor = true;
-            // 
             // checkBoxArchery
             // 
             this.checkBoxArchery.AutoSize = true;
-            this.checkBoxArchery.Location = new System.Drawing.Point(8, 409);
+            this.checkBoxArchery.Location = new System.Drawing.Point(8, 110);
             this.checkBoxArchery.Name = "checkBoxArchery";
             this.checkBoxArchery.Size = new System.Drawing.Size(115, 17);
             this.checkBoxArchery.TabIndex = 36;
@@ -430,9 +408,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 495);
+            this.ClientSize = new System.Drawing.Size(356, 458);
             this.Controls.Add(this.checkBoxArchery);
-            this.Controls.Add(this.checkBoxSkiing);
             this.Controls.Add(this.checkBoxBiathlon);
             this.Controls.Add(this.checkBoxCycling);
             this.Controls.Add(this.checkBoxSwimming);
@@ -460,7 +437,6 @@
             this.Controls.Add(this.checkBoxRockClimbing);
             this.Controls.Add(this.checkBoxJuiJutsu);
             this.Controls.Add(this.checkBoxFencing);
-            this.Controls.Add(this.checkBoxSamba);
             this.Controls.Add(this.checkBoxTaekwondo);
             this.Controls.Add(this.checkBoxBoxing);
             this.Controls.Add(this.checkBoxBasketball);
@@ -482,7 +458,6 @@
         private System.Windows.Forms.CheckBox checkBoxBasketball;
         private System.Windows.Forms.CheckBox checkBoxBoxing;
         private System.Windows.Forms.CheckBox checkBoxTaekwondo;
-        private System.Windows.Forms.CheckBox checkBoxSamba;
         private System.Windows.Forms.CheckBox checkBoxFencing;
         private System.Windows.Forms.CheckBox checkBoxJuiJutsu;
         private System.Windows.Forms.CheckBox checkBoxRockClimbing;
@@ -510,7 +485,6 @@
         private System.Windows.Forms.CheckBox checkBoxSwimming;
         private System.Windows.Forms.CheckBox checkBoxCycling;
         private System.Windows.Forms.CheckBox checkBoxBiathlon;
-        private System.Windows.Forms.CheckBox checkBoxSkiing;
         private System.Windows.Forms.CheckBox checkBoxArchery;
     }
 }

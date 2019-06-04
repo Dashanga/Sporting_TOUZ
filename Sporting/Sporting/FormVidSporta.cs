@@ -28,7 +28,15 @@ namespace Sporting
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            var form = new FormArea();
+            List<string> vidsporta = new List<string>();
+            foreach (Control c in this.Controls)
+            {
+                if (c is CheckBox && (c as CheckBox).Checked)
+                {
+                    vidsporta.Add(c.Text);
+                }
+            }
+            var form = new FormArea(vidsporta);
             form.Show();
             this.Hide();
         }

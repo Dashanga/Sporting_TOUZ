@@ -76,7 +76,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(103, 17);
             this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "до 1000 рублей";
+            this.checkBox1.Text = "0 - 1000 рублей";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBox2

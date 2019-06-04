@@ -12,22 +12,41 @@ namespace Sporting
 {
     public partial class FormComand : Form
     {
-        public FormComand(String[] vidsporta, String[] rayon, int[] cena, int[] cenaekip, int[] vozrast, string[] trebovaniya)
+        List<string> vidsporta;
+        List<string> rayon;
+        List<int> cena;
+        List<int> cenaekip;
+        List<int> vozrast;
+        List<int> trebovaniya;
+        public FormComand(List<string> vidsporta, List<string> rayon, List<int> cena, List<int> cenaekip, List<int> vozrast, List<int> trebovaniya)
         {
             InitializeComponent();
-
+            this.vidsporta = vidsporta;
+            this.rayon = rayon;
+            this.cena = cena;
+            this.cenaekip = cenaekip;
+            this.vozrast = vozrast;
+            this.trebovaniya = trebovaniya;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            var form = new FormTrebovaniya();
+            var form = new FormTrebovaniya(vidsporta, rayon, cena, cenaekip, vozrast);
             form.Show();
             this.Hide();
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            var form = new FormTravm();
+            List < string > comand = new List<string>();
+            foreach (Control c in this.Controls)
+            {
+                if (c is CheckBox && (c as CheckBox).Checked)
+                {
+                    comand.Add(c.Text);
+                }
+            }
+            var form = new FormTravm(vidsporta, rayon, cena, cenaekip, vozrast, trebovaniya, comand);
             form.Show();
             this.Hide();
         }

@@ -12,21 +12,39 @@ namespace Sporting
 {
     public partial class FormTrebovaniya : Form
     {
-        public FormTrebovaniya(String[] vidsporta, String[] rayon, int[] cena, int[] cenaekip, int[] vozrast)
+        List<string> vidsporta;
+        List<string> rayon;
+        List<int> cena;
+        List<int> cenaekip;
+        List<int> vozrast;
+        public FormTrebovaniya(List<string> vidsporta, List<string> rayon, List<int> cena, List<int> cenaekip, List<int> vozrast)
         {
             InitializeComponent();
+            this.vidsporta = vidsporta;
+            this.rayon = rayon;
+            this.cena = cena;
+            this.cenaekip = cenaekip;
+            this.vozrast = vozrast;
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            var form = new FormComand();
+            List<int> trebovaniya = new List<int>();
+            foreach (Control c in this.Controls)
+            {
+                if (c is CheckBox && (c as CheckBox).Checked)
+                {
+                    trebovaniya.Add(Convert.ToInt32(c.Text));
+                }
+            }
+            var form = new FormComand(vidsporta, rayon, cena, cenaekip, vozrast, trebovaniya);
             form.Show();
             this.Hide();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            var form = new FormVozrast();
+            var form = new FormVozrast(vidsporta, rayon, cena, cenaekip);
             form.Show();
             this.Hide();
         }

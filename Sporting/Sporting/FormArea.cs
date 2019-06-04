@@ -12,16 +12,24 @@ namespace Sporting
 {
     public partial class FormArea : Form
     {
-        String[] vidsporta;
-        public FormArea(String[] vidsporta)
+        List <string> vidsporta;
+        public FormArea(List<string> vidsporta)
         {
             InitializeComponent();
-            vidsporta = vidsporta;
+            this.vidsporta = vidsporta;
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            var form = new FormCena();
+            List<string> rayon = new List<string>();
+            foreach (Control c in this.Controls)
+            {
+                if (c is CheckBox && (c as CheckBox).Checked)
+                {
+                    rayon.Add(c.Text);
+                }
+            }
+            var form = new FormCena(vidsporta, rayon);
             form.Show();
             this.Hide();
         }

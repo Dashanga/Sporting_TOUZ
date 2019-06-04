@@ -56,7 +56,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(103, 17);
             this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "до 1000 рублей";
+            this.checkBox1.Text = "0 - 1000 рублей";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBox2
@@ -114,9 +114,9 @@
             this.checkBox5.AutoSize = true;
             this.checkBox5.Location = new System.Drawing.Point(31, 164);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(121, 17);
+            this.checkBox5.Size = new System.Drawing.Size(130, 17);
             this.checkBox5.TabIndex = 10;
-            this.checkBox5.Text = "более 4000 рублей";
+            this.checkBox5.Text = "4000 и более рублей";
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
             // FormEkipirovka

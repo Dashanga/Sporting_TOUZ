@@ -13,9 +13,27 @@ namespace Sporting
 {
     public partial class FormResult : Form
     {
-        public FormResult(String[] vidsporta, String[] rayon, int[] cena, int[] cenaekip, int[] vozrast, string[] trebovaniya, string[] comand, int[] travm, int[] chastota)
+        List<string> vidsporta;
+        List<string> rayon;
+        List<int> cena;
+        List<int> cenaekip;
+        List<int> vozrast;
+        List<int> trebovaniya;
+        List<string> comand;
+        List<int> travm;
+        List<int> chastota;
+        public FormResult(List<string> vidsporta, List<string> rayon, List<int> cena, List<int> cenaekip, List<int> vozrast, List<int> trebovaniya, List<string> comand, List<int> travm, List<int> chastota)
         {
             InitializeComponent();
+            this.vidsporta = vidsporta;
+            this.rayon = rayon;
+            this.cena = cena;
+            this.cenaekip = cenaekip;
+            this.vozrast = vozrast;
+            this.trebovaniya = trebovaniya;
+            this.comand = comand;
+            this.travm = travm;
+            this.chastota = chastota;
         }
 
 
@@ -29,7 +47,7 @@ namespace Sporting
             listBox1.Items.Add("Вашему ребёнку подойдут секции:");
             using (var context = new SportSectionsEntities())
             {
-                var tableObj = context.Table.Where(u => u.Komand == "Командный").ToList();
+                var tableObj = context.Table.Where(u => comand.Contains(u.Komand) && vidsporta.Contains(u.VidSporta) && rayon.Contains(u.Rayon) && u.CenaMin <= 23).ToList();
                 int i = 1;
                 foreach (var obj in tableObj)
                 {

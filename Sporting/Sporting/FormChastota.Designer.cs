@@ -31,7 +31,6 @@
             this.labelChoose = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -50,32 +49,22 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(16, 77);
+            this.checkBox1.Location = new System.Drawing.Point(30, 85);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(118, 17);
+            this.checkBox1.Size = new System.Drawing.Size(124, 17);
             this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "1-2 раза в неделю";
+            this.checkBox1.Text = "1 - 2 раза в неделю";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(16, 100);
+            this.checkBox2.Location = new System.Drawing.Point(30, 119);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(109, 17);
+            this.checkBox2.Size = new System.Drawing.Size(124, 17);
             this.checkBox2.TabIndex = 5;
-            this.checkBox2.Text = "3 раза в неделю";
+            this.checkBox2.Text = "3 - 4 раза в неделю";
             this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(16, 123);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(132, 17);
-            this.checkBox3.TabIndex = 6;
-            this.checkBox3.Text = "чаще 3 раз в неделю";
-            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // buttonBack
             // 
@@ -104,7 +93,6 @@
             this.ClientSize = new System.Drawing.Size(233, 192);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.labelChoose);
@@ -119,7 +107,6 @@
         private System.Windows.Forms.Label labelChoose;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonNext;
     }
