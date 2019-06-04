@@ -29,13 +29,16 @@ namespace Sporting
 
         private void buttonGetData_Click(object sender, EventArgs e)
         {
-            
-
             using (var context = new SportSectionsEntities())
             {
-                var tableObj = context.Table.SqlQuery(Createzapros()).ToList();
-                dataGridView1.DataSource = tableObj; 
+                var tableObj = context.Table.FirstOrDefault();
+                //labelWelcome.Text = tableObj.NameOfSection;
+                string[] result = new string[] { tableObj.NameOfSection, "rere", "kzkz" };
+                listBox1.Items.AddRange(result);
             }
+
+
+            
         }
 
         private String Createzapros()
