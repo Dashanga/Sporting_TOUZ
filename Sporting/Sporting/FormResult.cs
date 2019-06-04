@@ -13,7 +13,7 @@ namespace Sporting
 {
     public partial class FormResult : Form
     {
-        public FormResult()
+        public FormResult(String[] vidsporta, String[] rayon, int[] cena, int[] cenaekip, int[] vozrast, string[] trebovaniya, string[] comand, int[] travm, int[] chastota)
         {
             InitializeComponent();
         }

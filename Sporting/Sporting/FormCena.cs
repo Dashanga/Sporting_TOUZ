@@ -12,7 +12,7 @@ namespace Sporting
 {
     public partial class FormCena : Form
     {
-        public FormCena()
+        public FormCena(String[] vidsporta, String[] rayon)
         {
             InitializeComponent();
         }

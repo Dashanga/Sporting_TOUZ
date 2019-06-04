@@ -12,7 +12,7 @@ namespace Sporting
 {
     public partial class FormComand : Form
     {
-        public FormComand()
+        public FormComand(String[] vidsporta, String[] rayon, int[] cena, int[] cenaekip, int[] vozrast, string[] trebovaniya)
         {
             InitializeComponent();
 

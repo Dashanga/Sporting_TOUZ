@@ -12,9 +12,11 @@ namespace Sporting
 {
     public partial class FormArea : Form
     {
-        public FormArea()
+        String[] vidsporta;
+        public FormArea(String[] vidsporta)
         {
             InitializeComponent();
+            vidsporta = vidsporta;
         }
 
         private void buttonOk_Click(object sender, EventArgs e)

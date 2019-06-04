@@ -12,7 +12,7 @@ namespace Sporting
 {
     public partial class FormChastota : Form
     {
-        public FormChastota()
+        public FormChastota(String[] vidsporta, String[] rayon, int[] cena, int[] cenaekip, int[] vozrast, string[] trebovaniya, string[] comand, int[] travm)
         {
             InitializeComponent();
         }

@@ -12,7 +12,7 @@ namespace Sporting
 {
     public partial class FormTravm : Form
     {
-        public FormTravm()
+        public FormTravm(String[] vidsporta, String[] rayon, int[] cena, int[] cenaekip, int[] vozrast, string[] trebovaniya, string[] comand)
         {
             InitializeComponent();
         }
