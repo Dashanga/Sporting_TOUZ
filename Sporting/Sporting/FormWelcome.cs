@@ -23,14 +23,5 @@ namespace Sporting
             form.Show(); // отображаем Form2
             this.Hide();
         }
-
-        private void FormWelcome_Load(object sender, EventArgs e)
-        {
-            using (var context = new SportSectionsEntities())
-            {
-                var tableObj = context.Table.FirstOrDefault();
-                labelWelcome.Text = tableObj.NameOfSection;
-            }
-        }
     }
 }

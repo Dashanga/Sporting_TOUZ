@@ -12,23 +12,21 @@ namespace Sporting
 {
     public partial class FormTravm : Form
     {
-        String z;
-        public FormTravm(String zap)
+        public FormTravm()
         {
             InitializeComponent();
-            z = zap;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            var form = new FormComand(z);
+            var form = new FormComand();
             form.Show();
             this.Hide();
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            var form = new FormResult(z);
+            var form = new FormChastota();
             form.Show();
             this.Hide();
         }

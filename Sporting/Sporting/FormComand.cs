@@ -12,24 +12,22 @@ namespace Sporting
 {
     public partial class FormComand : Form
     {
-        String z;
-        public FormComand(String zap)
+        public FormComand()
         {
             InitializeComponent();
-            z = zap;
 
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            var form = new FormTrebovaniya(z);
+            var form = new FormTrebovaniya();
             form.Show();
             this.Hide();
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            var form = new FormTravm(z);
+            var form = new FormTravm();
             form.Show();
             this.Hide();
         }

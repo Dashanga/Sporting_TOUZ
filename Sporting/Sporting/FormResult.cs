@@ -13,12 +13,9 @@ namespace Sporting
 {
     public partial class FormResult : Form
     {
-        String str;
-        public FormResult(String zapros)
+        public FormResult()
         {
             InitializeComponent();
-            str = zapros;
-            //LoadData(zapros);
         }
 
 
@@ -29,22 +26,21 @@ namespace Sporting
 
         private void buttonGetData_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Add("Вашему ребёнку подойдут секции:");
             using (var context = new SportSectionsEntities())
             {
-                var tableObj = context.Table.FirstOrDefault();
-                //labelWelcome.Text = tableObj.NameOfSection;
-                string[] result = new string[] { tableObj.NameOfSection, "rere", "kzkz" };
-                listBox1.Items.AddRange(result);
+                var tableObj = context.Table.Where(u => u.Komand == "Командный").ToList();
+                int i = 1;
+                foreach (var obj in tableObj)
+                {
+                    string[] result = new string[] { i.ToString(), "Название секции:", obj.NameOfSection, "Вид спорта:", obj.VidSporta, "Адрес:", obj.Place, "Контакты:", obj.Contact, ""};
+                    listBox1.Items.AddRange(result);
+                    i++;
+                }
             }
 
 
             
-        }
-
-        private String Createzapros()
-        {
-            str = str + ";";
-            return str;
         }
     }
 }

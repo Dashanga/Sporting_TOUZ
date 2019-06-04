@@ -50,9 +50,6 @@
           <Property Name="CenaMin" Type="Int32" />
           <Property Name="CenaEkipMin" Type="Int32" />
           <Property Name="Rayon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="AgeMax" Type="Int32" />
-          <Property Name="CenaMax" Type="Int32" />
-          <Property Name="CenaEkipMax" Type="Int32" />
         </EntityType>
         <EntityContainer Name="SportSectionsEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Table" EntityType="Self.Table" />
@@ -66,9 +63,6 @@
           <EntitySetMapping Name="Table">
             <EntityTypeMapping TypeName="SportSectionsModel.Table">
               <MappingFragment StoreEntitySet="Table">
-                <ScalarProperty Name="CenaEkipMax" ColumnName="CenaEkipMax" />
-                <ScalarProperty Name="CenaMax" ColumnName="CenaMax" />
-                <ScalarProperty Name="AgeMax" ColumnName="AgeMax" />
                 <ScalarProperty Name="Rayon" ColumnName="Rayon" />
                 <ScalarProperty Name="CenaEkipMin" ColumnName="CenaEkipMin" />
                 <ScalarProperty Name="CenaMin" ColumnName="CenaMin" />

@@ -12,16 +12,14 @@ namespace Sporting
 {
     public partial class FormArea : Form
     {
-        String z;
-        public FormArea(String zapros)
+        public FormArea()
         {
             InitializeComponent();
-            z = zapros;
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            var form = new FormCena(z);
+            var form = new FormCena();
             form.Show();
             this.Hide();
         }
