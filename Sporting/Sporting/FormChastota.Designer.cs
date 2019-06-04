@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.labelChoose = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // labelChoose
@@ -45,26 +44,6 @@
             this.labelChoose.Size = new System.Drawing.Size(227, 46);
             this.labelChoose.TabIndex = 3;
             this.labelChoose.Text = "Выберите подходящую частоту занятий:\r\n";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(30, 85);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(124, 17);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "1 - 2 раза в неделю";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(30, 119);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(124, 17);
-            this.checkBox2.TabIndex = 5;
-            this.checkBox2.Text = "3 - 4 раза в неделю";
-            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // buttonBack
             // 
@@ -86,15 +65,25 @@
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1 - 2 раза в неделю",
+            "3 - 4 раза в неделю"});
+            this.comboBox1.Location = new System.Drawing.Point(30, 89);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(153, 21);
+            this.comboBox1.TabIndex = 9;
+            // 
             // FormChastota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(233, 192);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.labelChoose);
             this.Name = "FormChastota";
             this.ResumeLayout(false);
@@ -105,9 +94,8 @@
         #endregion
 
         private System.Windows.Forms.Label labelChoose;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonNext;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

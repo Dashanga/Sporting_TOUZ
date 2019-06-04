@@ -28,6 +28,12 @@ namespace Sporting
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
+            if (!Check())
+            {
+                MessageBox.Show("Выберите хотя бы один пункт", "Ошибка", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                return;
+            }
             List<string> vidsporta = new List<string>();
             foreach (Control c in this.Controls)
             {
@@ -40,6 +46,18 @@ namespace Sporting
             form.Show();
             this.Hide();
         }
-        
+
+        Boolean Check()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is CheckBox && (c as CheckBox).Checked)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }

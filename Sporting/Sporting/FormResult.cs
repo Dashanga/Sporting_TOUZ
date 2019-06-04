@@ -18,11 +18,11 @@ namespace Sporting
         List<int> cena;
         List<int> cenaekip;
         List<int> vozrast;
-        List<int> trebovaniya;
+        List<int?> trebovaniya;
         List<string> comand;
-        List<int> travm;
+        List<int?> travm;
         List<int> chastota;
-        public FormResult(List<string> vidsporta, List<string> rayon, List<int> cena, List<int> cenaekip, List<int> vozrast, List<int> trebovaniya, List<string> comand, List<int> travm, List<int> chastota)
+        public FormResult(List<string> vidsporta, List<string> rayon, List<int> cena, List<int> cenaekip, List<int> vozrast, List<int?> trebovaniya, List<string> comand, List<int?> travm, List<int> chastota)
         {
             InitializeComponent();
             this.vidsporta = vidsporta;
@@ -47,7 +47,14 @@ namespace Sporting
             listBox1.Items.Add("Вашему ребёнку подойдут секции:");
             using (var context = new SportSectionsEntities())
             {
-                var tableObj = context.Table.Where(u => comand.Contains(u.Komand) && vidsporta.Contains(u.VidSporta) && rayon.Contains(u.Rayon) && u.CenaMin <= 23).ToList();
+                int cenaMinLeft = cena[0];
+                int cenaMinRight = cena[1];
+                int cenaekipMinLeft = cenaekip[0];
+                int cenaekipMinRight = cenaekip[1];
+                int chastotaMin = chastota[0];
+                int chastotaMax = chastota[1];
+                int age = vozrast[0];
+                var tableObj = context.Table.Where(u => comand.Contains(u.Komand) && vidsporta.Contains(u.VidSporta) && rayon.Contains(u.Rayon) && u.CenaMin >= cenaMinLeft && u.CenaMin <= cenaMinRight && u.CenaEkipMin >= cenaekipMinLeft && u.CenaEkipMin <= cenaekipMinRight && u.AgeMin <= age && u.AgeMax >= age && trebovaniya.Contains(u.Podgotovka) && travm.Contains(u.Travmoopasnost) && u.Chastota >= chastotaMin && u.Chastota <= chastotaMax).ToList();
                 int i = 1;
                 foreach (var obj in tableObj)
                 {

@@ -29,7 +29,13 @@ namespace Sporting
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            List<int> trebovaniya = new List<int>();
+            if (!Check())
+            {
+                MessageBox.Show("Выберите хотя бы один пункт", "Ошибка", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                return;
+            }
+            List<int?> trebovaniya = new List<int?>();
             foreach (Control c in this.Controls)
             {
                 if (c is CheckBox && (c as CheckBox).Checked)
@@ -40,6 +46,17 @@ namespace Sporting
             var form = new FormComand(vidsporta, rayon, cena, cenaekip, vozrast, trebovaniya);
             form.Show();
             this.Hide();
+        }
+        Boolean Check()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is CheckBox && (c as CheckBox).Checked)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

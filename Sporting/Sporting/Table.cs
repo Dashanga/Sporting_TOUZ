@@ -27,5 +27,6 @@ namespace Sporting
         public Nullable<int> CenaMin { get; set; }
         public Nullable<int> CenaEkipMin { get; set; }
         public string Rayon { get; set; }
+        public int AgeMax { get; set; }
     }
 }

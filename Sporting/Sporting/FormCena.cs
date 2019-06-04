@@ -23,18 +23,20 @@ namespace Sporting
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            List<int> cena = new List<int>();
-            foreach (Control c in this.Controls)
+            if (comboBox1.SelectedIndex == -1)
             {
-                if (c is CheckBox && (c as CheckBox).Checked)
-                {
-                    String[] str = c.Text.Replace(" рублей", "").Replace(" и более", "").Split('-');
-                    foreach (string s in str)
-                    {
-                        cena.Add(Convert.ToInt32(s.TrimEnd()));
-                    }
-                }
+                MessageBox.Show("Выберите один пункт", "Ошибка", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                return;
             }
+            List<int> cena = new List<int>();
+           
+            String[] str = comboBox1.SelectedItem.ToString().Replace(" рублей", "").Replace(" и более", "").Split('-');
+            foreach (string s in str)
+            {
+                cena.Add(Convert.ToInt32(s.TrimEnd()));
+            }
+              
             if (cena.Count == 1)
             {
                 cena.Add(int.MaxValue);

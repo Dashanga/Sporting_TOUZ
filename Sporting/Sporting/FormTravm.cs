@@ -17,9 +17,9 @@ namespace Sporting
         List<int> cena;
         List<int> cenaekip;
         List<int> vozrast;
-        List<int> trebovaniya;
+        List<int?> trebovaniya;
         List<string> comand;
-        public FormTravm(List<string> vidsporta, List<string> rayon, List<int> cena, List<int> cenaekip, List<int> vozrast, List<int> trebovaniya, List<string> comand)
+        public FormTravm(List<string> vidsporta, List<string> rayon, List<int> cena, List<int> cenaekip, List<int> vozrast, List<int?> trebovaniya, List<string> comand)
         {
             InitializeComponent();
             this.vidsporta = vidsporta;
@@ -40,7 +40,13 @@ namespace Sporting
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            List<int> travm = new List<int>();
+            if (!Check())
+            {
+                MessageBox.Show("Выберите хотя бы один пункт", "Ошибка", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                return;
+            }
+            List<int?> travm = new List<int?>();
             foreach (Control c in this.Controls)
             {
                 if (c is CheckBox && (c as CheckBox).Checked)
@@ -51,6 +57,17 @@ namespace Sporting
             var form = new FormChastota(vidsporta, rayon, cena, cenaekip, vozrast, trebovaniya, comand, travm);
             form.Show();
             this.Hide();
+        }
+        Boolean Check()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is CheckBox && (c as CheckBox).Checked)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

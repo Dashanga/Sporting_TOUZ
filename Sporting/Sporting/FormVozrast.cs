@@ -27,8 +27,22 @@ namespace Sporting
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBoxVozrast.Text))
+            {
+                MessageBox.Show("Заполните поле", "Ошибка",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             List<int> vozrast = new List<int>();
-            vozrast.Add(Convert.ToInt32(textBoxVozrast.Text));
+            try {
+                vozrast.Add(Convert.ToInt32(textBoxVozrast.Text));
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                return;
+            }
             var form = new FormTrebovaniya(vidsporta, rayon, cena, cenaekip, vozrast);
             form.Show();
             this.Hide();

@@ -17,10 +17,10 @@ namespace Sporting
         List<int> cena;
         List<int> cenaekip;
         List<int> vozrast;
-        List<int> trebovaniya;
+        List<int?> trebovaniya;
         List<string> comand;
-        List<int> travm;
-        public FormChastota(List<string> vidsporta, List<string> rayon, List<int> cena, List<int> cenaekip, List<int> vozrast, List<int> trebovaniya, List<string> comand, List<int> travm)
+        List<int?> travm;
+        public FormChastota(List<string> vidsporta, List<string> rayon, List<int> cena, List<int> cenaekip, List<int> vozrast, List<int?> trebovaniya, List<string> comand, List<int?> travm)
         {
             InitializeComponent();
             this.vidsporta = vidsporta;
@@ -42,17 +42,18 @@ namespace Sporting
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            List<int> chastota = new List<int>();
-            foreach (Control c in this.Controls)
+            if (comboBox1.SelectedIndex == -1)
             {
-                if (c is CheckBox && (c as CheckBox).Checked)
-                {
-                    String[] str = c.Text.Replace(" раза в неделю", "").Split('-');
-                    foreach (string s in str)
-                    {
-                        chastota.Add(Convert.ToInt32(s.TrimEnd()));
-                    }
-                }
+                MessageBox.Show("Выберите один пункт", "Ошибка", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                return;
+            }
+            List<int> chastota = new List<int>();
+
+            String[] str = comboBox1.SelectedItem.ToString().Replace(" раза в неделю", "").Split('-');
+            foreach (string s in str)
+            {
+                chastota.Add(Convert.ToInt32(s.TrimEnd()));
             }
             var form = new FormResult(vidsporta, rayon, cena, cenaekip, vozrast, trebovaniya, comand, travm, chastota);
             form.Show();
